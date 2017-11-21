@@ -1,0 +1,22 @@
+<h1><%= @task.name %></h1>
+
+<p>
+Task name: <%= @task.name %>
+</p>
+<p>
+Task description: <%= @task.description %>
+</p>
+
+
+<%= link_to "Tasks list", tasks_path %>
+
+
+
+<%= link_to button_tag("Delete"), "#{tasks_path}/#{@task.id}",
+      method: :delete,
+      data: { confirm: "Do really want to delete this task?" } %>
+
+<%= link_to button_tag("Edit"), edit_task_path(@task),
+      method: :get,
+      data: { confirm: "Do really want to edit?" } %>
+

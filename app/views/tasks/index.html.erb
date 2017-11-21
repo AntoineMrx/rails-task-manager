@@ -1,0 +1,4 @@
+<h1>Here is your tasks list</h1>
+<ul><% @tasks.each do |task|%></ul>
+<a href= "<%= tasks_path%>/<%=task.id %>"><li><strong>ID</strong> <%= task['id']%> <strong>NAME</strong> <%= task['name']%> || <strong>DESCRIPTION</strong> <%= task['description'] %> </li></a>
+<%end%>
